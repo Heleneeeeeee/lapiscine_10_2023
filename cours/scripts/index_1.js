@@ -124,7 +124,14 @@ let obj1 = {
     prop9: 'hello'
 }
 
-console.log(obj1.prop9)
+// console.log(obj1.prop9)
+
+let identity = {
+    firstname: 'Paul',
+    lastname: 'Doazan',
+    age: 35,
+    town: 'Talence' 
+}
 
 let identity2 = {
     firstname: 'Pierre',
@@ -138,8 +145,12 @@ let identity2 = {
   
     let resultFromObject = `Je m'appelle ${identity.firstname} ${identity.lastname}, j'ai ${identity.age} ans et j'habite à ${identity.town}.`
 
-    console.log(resultFromObject);
+    // console.log(resultFromObject);
 
 //   Pour ceux qui ont terminé, créer un deuxième objet identity2, stocker identity et identity2 dans un tableau, et écrire la phrase précédente en utilisant le tableau.
   
 let arrIdentities = [identity, identity2]
+
+// console.log(arrIdentities[1].firstname)
+
+let resultFromObject2 = `Je m'appelle ${arrIdentities[0].firstname} ${arrIdentities[0].lastname}, j'ai ${arrIdentities[0].age} ans et j'habite à ${arrIdentities[0].town}!!`
