@@ -99,10 +99,87 @@ for (let i =0; i < numbers.length; i++ ){
 
 let max = 0
 
-for (let i = 0; i < numbers.length; i++ ){
-    if (numbers[i] > max) {
-        max = numbers [i]
+// for (let i = 0; i < numbers.length; i++ ){
+//     if (numbers[i] > max) {
+//         max = numbers [i]
+//     }
+// }
+// console.log (max);
+
+// Afficher uniquement les nombres strictement supérieurs à 4 ==> 5, 12, 8
+
+// let filteredNumbers = []
+
+// for (let ind = 0; ind < numbers.length; ind++ ) {
+//     if (numbers [ind] > 4 ) {
+//         filteredNumbers.push (numbers[ind])
+//     }
+// }
+
+// console.log (filteredNumbers)
+//Encapsuler le script précédent dans une fonction et y ajouter le paramètre limit
+
+// const arrayResult = filterArray (4)
+
+// // console.log (arrayResult)
+
+// function filterArray (limit) {
+//     let filteredNumbers = []
+//     for (let ind = 0; ind < numbers.length; ind ++) {
+//         if (numbers [ind] > limit) {
+//             filteredNumbers.push (numbers[ind])
+//         }
+//     }
+    // console.log (filteredNumbers)
+    // return filteredNumbers
+// }
+
+// Ecrire une boucle for pour afficher dans un nouveau tableau toutes les personnes malades (isSick==0)
+
+const persons = [{
+    name: "Pierre",
+    hasCar: true,
+    hasBike: true,
+    isSick:true
+}, {
+    name: "Mélanie",
+    hasCar: true,
+    hasBike: false,
+    isSick:false
+}, {
+    name: "Paul",
+    hasCar: false,
+    hasBike: true,
+    isSick:true
+}, {
+    name: "Sophie",
+    hasCar: false,
+    hasBike: false,
+    isSick:false
+}]
+
+let sickPersons = []
+
+for (let i = 0; i < persons.length; i++) {
+    if (persons[i].isSick) {
+        sickPersons.push (persons[i])
     }
 }
-console.log (max);
 
+// console.log (sickPersons)
+
+// Difficulté supplémentaire, encapsuler la boucle dans une fonction et passer le tableau en paramètre
+
+const result = findSickPeople(persons)
+console.log (result);
+
+function findSickPeople (arr) {
+    let sickPersons = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].isSick) {
+            sickPersons.push (arr[i])
+        }
+    }
+    return sickPersons;
+}
